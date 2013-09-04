@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import fr.meehome.cv.webapp.model.Authentification;
 import fr.meehome.cv.webapp.model.User;
+import fr.meehome.cv.webapp.utils.Pages;
 
 @Controller
 @RequestMapping("/accueil")
@@ -29,7 +30,7 @@ public class AccueilController {
     @RequestMapping(method = RequestMethod.GET)
     public String accueil(ModelMap model) {
         model.addAttribute("authentification", new Authentification());
-        return "accueil";
+        return Pages.accueil.getLibelle();
     }
 
     // VALIDATION FORMULAIRE DE CONNEXION
@@ -48,7 +49,7 @@ public class AccueilController {
                 model.addAttribute("userAuthentificated", user);
             }
         }
-        return "accueil";
+        return Pages.accueil.getLibelle();
     }
 
     // AFFICHE LA PAGE D'INSCRIPTION
@@ -56,7 +57,7 @@ public class AccueilController {
     public String inscription(ModelMap model) {
         model.addAttribute("authentification", new Authentification());
         model.addAttribute("user", new User());
-        return "inscription";
+        return Pages.inscription.getLibelle();
     }
 
     // VALIDATION FORMULAIRE INSCRIPTION
@@ -65,8 +66,8 @@ public class AccueilController {
     @Valid
     User user, BindingResult result) {
         if (result.hasErrors()) {
-            return "inscription";
+            return Pages.inscription.getLibelle();
         }
-        return "inscriptionSuccess";
+        return Pages.inscriptionSuccess.getLibelle();
     }
 }
