@@ -17,6 +17,11 @@
         <put-attribute name="section" value="/WEB-INF/pages/accueil.jsp" />
     </definition>
     
+    <!-- MON CV -->
+    <definition name="moncv" extends="template">
+        <put-attribute name="section" value="/WEB-INF/pages/cv/moncv.jsp" />
+    </definition>
+    
     <!-- INSCRIPTION -->
     <definition name="inscription" extends="template">
         <put-attribute name="section" value="/WEB-INF/pages/inscription.jsp" />

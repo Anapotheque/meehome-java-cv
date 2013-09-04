@@ -3,24 +3,32 @@
 Menu
 <hr/>
 <c:choose>
-	<c:when test="${empty not userAuthentificated.nom}">
+	<c:when test="${not empty userAuthentificated.nom}">
 		
-		<script>$(function(){$("#accordion").accordion();});</script>
+		<script>$(function(){$("#accordion").accordion({heightStyle:"content",collapsible:true});});</script>
 		<div id="accordion">
+		
 			<h3>Creation CV</h3>
 			<div>
-				<a href="#">Creer un nouveau CV</a>
-				<a href="#">Modifier un CV</a>
+				<ul>
+					<li><a href="<c:url value='/cv' />">Mon CV</a></li>
+				</ul>
 			</div>
+			
 			<h3>Mon compte</h3>
 			<div>
-				<a href="#">modifier mon compte</a>
-				<a href="#">déconnexion</a>
+				<ul>
+					<li><a href="#">modifier mon compte</a></li>
+					<li><a href="<c:url value='/deconnexion' />">déconnexion</a></li>
+				</ul>
 			</div>
+			
 			<h3>Divers</h3>
 			<div>
-				<a href="#">modifier mon compte</a>
-				<a href="#">modifier mon compte</a>
+				<ul>
+					<li><a href="#">modifier mon compte</a></li>
+					<li><a href="#">modifier mon compte</a></li>
+				</ul>
 			</div>
 		</div>
 		
