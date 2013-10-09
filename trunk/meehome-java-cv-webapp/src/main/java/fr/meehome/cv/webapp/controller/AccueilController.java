@@ -10,42 +10,56 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import fr.meehome.cv.webapp.model.Authentification;
 import fr.meehome.cv.webapp.model.User;
 import fr.meehome.cv.webapp.utils.Pages;
 
 @Controller
 @RequestMapping("/accueil/")
-public class AccueilController {
+public class AccueilController extends MetaController {
 
     private static final Logger LOG = Logger.getLogger(AccueilController.class);
 
     /**
-     * Gestion des bean affichés dans la page
+     * On affiche la page d'accueil
      * 
+     * @param model
      * @return
      */
-    @ModelAttribute("authentification")
-    public Authentification getAuthentification() {
-        LOG.debug("AccueilController :: getAuthentification");
-        return new Authentification();
-    }
-
-    // AFFICHE LA PAGE D'ACCUEIL
     @RequestMapping(method = RequestMethod.GET)
     public String accueil(ModelMap model) {
         return Pages.accueil.getLibelle();
     }
 
-    // AFFICHE LA PAGE D'INSCRIPTION
-    @RequestMapping(value = "/inscription", method = RequestMethod.GET)
+    /**
+     * On affiche la page d'inscription
+     * 
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/accueil/inscription", method = RequestMethod.GET)
     public String inscription(ModelMap model) {
-        model.addAttribute("user", new User());
         return Pages.inscription.getLibelle();
     }
 
-    // VALIDATION FORMULAIRE INSCRIPTION
-    @RequestMapping(value = "/inscription", method = RequestMethod.POST)
+    /**
+     * On affiche la page de mise à jour user
+     * 
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/accueil/updateUser", method = RequestMethod.GET)
+    public String updateUser(ModelMap model) {
+        return Pages.inscription.getLibelle();
+    }
+
+    /**
+     * Validation du formulaire d'inscription
+     * 
+     * @param user
+     * @param result
+     * @return
+     */
+    @RequestMapping(value = "/accueil/inscription", method = RequestMethod.POST)
     public String connexion(@ModelAttribute("user")
     @Valid
     User user, BindingResult result) {
