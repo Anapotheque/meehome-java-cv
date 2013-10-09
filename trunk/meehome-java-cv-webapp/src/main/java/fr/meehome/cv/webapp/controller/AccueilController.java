@@ -15,7 +15,7 @@ import fr.meehome.cv.webapp.model.User;
 import fr.meehome.cv.webapp.utils.Pages;
 
 @Controller
-@RequestMapping("/accueil")
+@RequestMapping("/accueil/")
 public class AccueilController {
 
     // private static final Logger logger =
@@ -29,7 +29,6 @@ public class AccueilController {
     // AFFICHE LA PAGE D'ACCUEIL
     @RequestMapping(method = RequestMethod.GET)
     public String accueil(ModelMap model) {
-        model.addAttribute("authentification", new Authentification());
         return Pages.accueil.getLibelle();
     }
 
