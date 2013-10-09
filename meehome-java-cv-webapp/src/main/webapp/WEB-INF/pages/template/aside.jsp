@@ -18,7 +18,7 @@ Menu
 			<h3>Mon compte</h3>
 			<div>
 				<ul>
-					<li><a href="#">modifier mon compte</a></li>
+					<li><a href="<c:url value='/accueil/updateUser' />">modifier mon compte</a></li>
 					<li><a href="<c:url value='/deconnexion' />">déconnexion</a></li>
 				</ul>
 			</div>
