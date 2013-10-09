@@ -30,6 +30,7 @@ public class ConnexionController {
                 User user = new User();
                 user.setNom("RABALLAND");
                 user.setPrenom("Romain");
+                user.setEmail("raballand.romain@gmail.com");
                 model.addAttribute("userAuthentificated", user);
             }
         }
