@@ -30,5 +30,16 @@
 	            <tiles:insertAttribute name="footer" />
 	        </footer>
         </div>
+        
+		<!-- JAVASCRIPT -->
+		<script src="<c:url value='/resources/js/jquery-1.9.1.js'/>"></script>
+		<script src="<c:url value='/resources/js/jquery-ui-1.10.3.custom.js'/>"></script>
+		<script src="<c:url value='/resources/bootstrap/js/bootstrap.min.js'/>"></script>
+		
+		<script>
+			$(function(){$("#buttonConnexion").button();});
+			$(function(){$("#buttonInscription").button();});
+		</script>
+        
     </body>
 </html>
