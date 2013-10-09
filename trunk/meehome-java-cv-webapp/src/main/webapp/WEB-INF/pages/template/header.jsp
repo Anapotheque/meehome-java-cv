@@ -4,7 +4,7 @@
 HEADER
 
 <div style="float:right;">
-	<form:form method="POST" commandName="authentification" action="connexion">
+	<form:form method="POST" commandName="authentification" action="/connexion">
 
 		<form:errors path="*" cssClass="ui-state-error ui-corner-all error" element="div" />
 		

@@ -14,6 +14,9 @@
 	        <nav class="ui-corner-all">
 	            <tiles:insertAttribute name="navigation" />
 	        </nav>
+	        <nav class="ui-corner-all">
+	            <tiles:insertAttribute name="breadcrumbs" />
+	        </nav>
 	        <div class="body">
 	            <aside class="ui-corner-all">
 	            	<tiles:insertAttribute name="aside" />

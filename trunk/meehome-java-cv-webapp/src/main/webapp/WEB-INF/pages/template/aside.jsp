@@ -35,6 +35,6 @@ Menu
 	</c:when>
 	<c:otherwise>
 		Pas encore de compte ? 
-		<a href="<c:url value='inscription' />" class="awesome">inscription</a>
+		<a href="<c:url value='/accueil/inscription' />" class="awesome">inscription</a>
 	</c:otherwise>
 </c:choose>
