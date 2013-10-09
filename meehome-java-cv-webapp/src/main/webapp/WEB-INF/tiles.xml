@@ -7,6 +7,7 @@
         <put-attribute name="meta" value="/WEB-INF/pages/template/meta.jsp" />
         <put-attribute name="header" value="/WEB-INF/pages/template/header.jsp" />
         <put-attribute name="navigation" value="/WEB-INF/pages/template/navigation.jsp" />
+        <put-attribute name="breadcrumbs" value="/WEB-INF/pages/template/breadcrumbs.jsp" />
         <put-attribute name="aside" value="/WEB-INF/pages/template/aside.jsp" />
         <put-attribute name="section" value="/WEB-INF/pages/template/section.jsp" />
         <put-attribute name="footer" value="/WEB-INF/pages/template/footer.jsp" />
@@ -14,7 +15,7 @@
 
 	<!-- ACCUEIL -->
     <definition name="accueil" extends="template">
-        <put-attribute name="section" value="/WEB-INF/pages/accueil.jsp" />
+    	<put-attribute name="section" value="/WEB-INF/pages/accueil.jsp" />
     </definition>
     
     <!-- MON CV -->
