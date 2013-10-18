@@ -36,9 +36,9 @@ public class AccueilController extends MetaController {
      * @param model
      * @return
      */
-    @RequestMapping(value = "/accueil/inscription", method = RequestMethod.GET)
+    @RequestMapping(value = "/inscription", method = RequestMethod.GET)
     public String inscription(ModelMap model) {
-        return Pages.inscription.getLibelle();
+        return Pages.inscriptionUser.getLibelle();
     }
 
     /**
@@ -47,9 +47,26 @@ public class AccueilController extends MetaController {
      * @param model
      * @return
      */
-    @RequestMapping(value = "/accueil/updateUser", method = RequestMethod.GET)
+    @RequestMapping(value = "/updateUser", method = RequestMethod.GET)
     public String updateUser(ModelMap model) {
-        return Pages.inscription.getLibelle();
+        return Pages.updateUser.getLibelle();
+    }
+
+    /**
+     * Validation du formulaire de mise à jour user
+     * 
+     * @param user
+     * @param result
+     * @return
+     */
+    @RequestMapping(value = "/updateUser", method = RequestMethod.POST)
+    public String valideUpdate(@ModelAttribute("user")
+    @Valid
+    User user, BindingResult result) {
+        if (result.hasErrors()) {
+            return Pages.updateUser.getLibelle();
+        }
+        return Pages.validationFormulaireSuccess.getLibelle();
     }
 
     /**
@@ -59,13 +76,13 @@ public class AccueilController extends MetaController {
      * @param result
      * @return
      */
-    @RequestMapping(value = "/accueil/inscription", method = RequestMethod.POST)
-    public String connexion(@ModelAttribute("user")
+    @RequestMapping(value = "/inscription", method = RequestMethod.POST)
+    public String valideInscription(@ModelAttribute("user")
     @Valid
     User user, BindingResult result) {
         if (result.hasErrors()) {
-            return Pages.inscription.getLibelle();
+            return Pages.inscriptionUser.getLibelle();
         }
-        return Pages.inscriptionSuccess.getLibelle();
+        return Pages.validationFormulaireSuccess.getLibelle();
     }
 }

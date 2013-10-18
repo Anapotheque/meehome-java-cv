@@ -18,19 +18,40 @@
     	<put-attribute name="section" value="/WEB-INF/pages/accueil.jsp" />
     </definition>
     
-    <!-- MON CV -->
-    <definition name="moncv" extends="template">
+    <!-- ******************************	-->
+    <!-- GESTION DES PAGES CV 	 	-->
+    <!-- ******************************	-->
+    
+   	<!-- MON CV -->
+       <definition name="moncv" extends="template">
         <put-attribute name="section" value="/WEB-INF/pages/cv/moncv.jsp" />
     </definition>
+	    
+    <!-- FIN GESTION DES PAGES USER 	-->
+    <!-- ******************************	-->
     
-    <!-- INSCRIPTION -->
-    <definition name="inscription" extends="template">
-        <put-attribute name="section" value="/WEB-INF/pages/inscription.jsp" />
+    <!-- ******************************	-->
+    <!-- GESTION DES PAGES USER 	 	-->
+    <!-- ******************************	-->
+   
+   	<!-- INSCRIPTION -->
+    <definition name="inscriptionUser" extends="template">
+        <put-attribute name="section" value="/WEB-INF/pages/user/inscription.jsp" />
     </definition>
     
-    <!-- INSCRIPTION SUCCESS -->
-    <definition name="inscriptionSuccess" extends="template">
-        <put-attribute name="section" value="/WEB-INF/pages/inscriptionSuccess.jsp" />
+    <!-- UPDATE USER -->
+    <definition name="updateUser" extends="template">
+        <put-attribute name="section" value="/WEB-INF/pages/user/update.jsp" />
+    </definition>
+	    
+	<!-- ******************************	-->
+    <!-- FIN GESTION DES PAGES USER 	-->
+    <!-- ******************************	-->
+    
+    
+    <!-- VALIDATION FORMULAIRE SUCCESS -->
+    <definition name="validationFormulaireSuccess" extends="template">
+        <put-attribute name="section" value="/WEB-INF/pages/validationFormulaireSuccess.jsp" />
     </definition>
     
 </tiles-definitions>
