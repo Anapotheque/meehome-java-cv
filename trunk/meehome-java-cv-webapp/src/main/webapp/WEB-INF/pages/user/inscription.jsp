@@ -30,6 +30,6 @@
 	<br/><br/>
 	
 	<a href="<c:url value='/accueil/' />">retour</a>
-	<button id="buttonInscription">inscription</button>
+	<button id="buttonInscription">valider</button>
 	
 </form:form>
