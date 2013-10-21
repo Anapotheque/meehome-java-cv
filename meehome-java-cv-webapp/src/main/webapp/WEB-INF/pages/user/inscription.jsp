@@ -5,31 +5,55 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<form:form method="POST" cssClass="formulaire" commandName="user">
+<form:form method="POST" cssClass="formulaire form-horizontal" commandName="user">
 	
-	Formulaire d'insciption
-	<hr/>
-	<i>Veuillez renseigner l'ensemble de ses champs afin de valider votre inscription</i><br/><br/>
-
-	<form:errors path="*" cssClass="ui-state-error ui-corner-all error" element="div" />
-
-	<label>Email</label>
-	<form:input path="email" placeholder="email" />
-	<br/><br/>
-	
-	<label>Nom</label>
-	<form:input path="nom" placeholder="nom" />
-	<br/><br/>
-	
-	<label>Prenom</label>
-	<form:input path="prenom" placeholder="prenom" />
-	<br/><br/>
-	
-	<label>Password</label>
-	<form:password path="password" placeholder="password" />
-	<br/><br/>
-	
-	<a href="<c:url value='/accueil/' />">retour</a>
-	<button id="buttonInscription">valider</button>
+	<div class="panel panel-default">
+		
+		<div class="panel-heading">
+			<h3 class="panel-title">Accueil</h3>
+		</div>
+		<div class="panel-body">
+		
+			<i>Veuillez renseigner l'ensemble de ses champs afin de valider votre inscription</i><br/><br/>
+		
+			<form:errors path="*" cssClass="ui-state-error ui-corner-all error" element="div" />
+			
+			<div class="form-group">
+				<label for="emailUser" class="col-lg-2 control-label">Email</label>
+				<div class="col-lg-10">
+					<form:input path="email" placeholder="email" id="emailUser" class="form-control" />
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="nom" class="col-lg-2 control-label">Nom</label>
+				<div class="col-lg-10">
+					<form:input path="nom" placeholder="nom" id="nom" class="form-control" />
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="prenom" class="col-lg-2 control-label">Prenom</label>
+				<div class="col-lg-10">
+					<form:input path="prenom" placeholder="prenom" id="prenom" class="form-control" />
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="passwordUser" class="col-lg-2 control-label">Password</label>
+				<div class="col-lg-10">
+					<form:password path="password" placeholder="password" id="passwordUser" class="form-control" />
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<a href="<c:url value='/accueil/' />" class="col-lg-2 control-label">retour</a>
+				<div class="col-lg-offset-2 col-lg-10">
+					<button id="buttonInscription" class="btn btn-default">valider</button>
+				</div>
+			</div>
+		
+		</div>
+	</div>
 	
 </form:form>
