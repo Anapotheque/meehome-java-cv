@@ -63,6 +63,7 @@ public class AccueilController extends MetaController {
     public String valideUpdate(@ModelAttribute("user")
     @Valid
     User user, BindingResult result) {
+        LOG.debug("valideUpdate User");
         if (result.hasErrors()) {
             return Pages.updateUser.getLibelle();
         }
@@ -80,6 +81,7 @@ public class AccueilController extends MetaController {
     public String valideInscription(@ModelAttribute("user")
     @Valid
     User user, BindingResult result) {
+        LOG.debug("valideInscription User");
         if (result.hasErrors()) {
             return Pages.inscriptionUser.getLibelle();
         }
