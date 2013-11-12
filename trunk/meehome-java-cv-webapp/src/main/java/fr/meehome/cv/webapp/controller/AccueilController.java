@@ -42,7 +42,7 @@ public class AccueilController extends MetaController {
     }
 
     /**
-     * On affiche la page de mise à jour user
+     * On affiche la page de mise a jour user
      * 
      * @param model
      * @return
@@ -53,16 +53,14 @@ public class AccueilController extends MetaController {
     }
 
     /**
-     * Validation du formulaire de mise à jour user
+     * Validation du formulaire de mise a jour user
      * 
      * @param user
      * @param result
      * @return
      */
     @RequestMapping(value = "/updateUser", method = RequestMethod.POST)
-    public String valideUpdate(@ModelAttribute("user")
-    @Valid
-    User user, BindingResult result) {
+    public String valideUpdate(@ModelAttribute("user") @Valid User user, BindingResult result) {
         LOG.debug("valideUpdate User");
         if (result.hasErrors()) {
             return Pages.updateUser.getLibelle();
@@ -78,9 +76,7 @@ public class AccueilController extends MetaController {
      * @return
      */
     @RequestMapping(value = "/inscription", method = RequestMethod.POST)
-    public String valideInscription(@ModelAttribute("user")
-    @Valid
-    User user, BindingResult result) {
+    public String valideInscription(@ModelAttribute("user") @Valid User user, BindingResult result) {
         LOG.debug("valideInscription User");
         if (result.hasErrors()) {
             return Pages.inscriptionUser.getLibelle();

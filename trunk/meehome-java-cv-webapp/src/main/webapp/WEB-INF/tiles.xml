@@ -27,7 +27,8 @@
         <put-attribute name="section" value="/WEB-INF/pages/cv/moncv.jsp" />
     </definition>
 	    
-    <!-- FIN GESTION DES PAGES USER 	-->
+	<!-- ****************************** -->
+    <!-- FIN GESTION DES PAGES CV	 	-->
     <!-- ******************************	-->
     
     <!-- ******************************	-->
@@ -47,7 +48,6 @@
 	<!-- ******************************	-->
     <!-- FIN GESTION DES PAGES USER 	-->
     <!-- ******************************	-->
-    
     
     <!-- VALIDATION FORMULAIRE SUCCESS -->
     <definition name="validationFormulaireSuccess" extends="template">

@@ -14,7 +14,7 @@
 		</div>
 		<div class="panel-body">
 		
-			<i>Veuillez renseigner l'ensemble de ses champs afin de valider votre inscription</i><br/><br/>
+			<p><i>Veuillez renseigner l'ensemble de ses champs afin de valider votre inscription</i></p>
 		
 			<form:errors path="*" cssClass="ui-state-error ui-corner-all error" element="div" />
 			
